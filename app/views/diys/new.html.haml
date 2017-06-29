@@ -1,0 +1,14 @@
+= form_for(@diy, multiple: true) do |f|
+  .diy-form
+    .diy-card-form
+      %h2 Posting
+      .diy-title-form
+        = f.text_field :title ,placeholder: :title
+      .diy-img-form
+        = f.text_field :url ,placeholder: :image
+      .diy-price-form
+        = f.text_field :price, placeholder: :price
+      .diy-comment-form
+        = f.text_area :comment, placeholder: :comment
+      %div
+        = f.submit('SEND')

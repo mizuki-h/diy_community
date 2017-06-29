@@ -1,0 +1,15 @@
+.diy-detail-card.col-md-3.col-md-4
+  .favorite
+    %input#fav{:type => "button", :value => "♡", data: {id: params[:id]}}
+  .diy-detail-img
+    = image_tag(@diy.url) if @diy.url.present?
+  .diy-detail-title
+    %h3 Title
+    %p= @diy.title
+  .diy-detail-price
+    %h3 Price
+    %p
+      ¥#{@diy.price}
+  .diy-detail-comment
+    %h3 Comment
+    %p= @diy.comment

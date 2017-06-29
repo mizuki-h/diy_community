@@ -1,0 +1,28 @@
+.search
+  = form_tag('/', :method => :get) do
+    .search-keyword
+      %p
+        Keyword #{text_field_tag 'keyword', ''}
+    .search-price
+      %p
+        Price #{number_field_tag 'price'}
+    .search-submit
+      = submit_tag "search"
+  .result
+    - if params[:keyword].present? || params[:price].present?
+      %h4 result
+      %p
+        keyword: #{params[:keyword]}
+      %p
+        Price: ¥#{params[:price]}　以内
+- @diys.each do |diy|
+  = link_to diy do
+    .diy-card.col-md-3.col-md-4
+      .diy-img
+        = image_tag(diy.url) if diy.url.present?
+      .diy-title
+        = diy.title
+      .diy-price
+        %p
+          ¥#{diy.price}
+= paginate(@diys)

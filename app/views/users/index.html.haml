@@ -1,0 +1,18 @@
+#mypage
+  %h3
+    %span> ♥
+    My Favorite List
+    %span{:style => "margin-left:10px;"} ♥
+  - if @fav
+    - @fav.each do |diy|
+      = link_to diy do
+        .diy-card.col-md-3.col-md-4
+          .diy-img
+            = image_tag(diy.url) if diy.url.present?
+          .diy-title
+            = diy.title
+          .diy-price
+            %p
+              ¥#{diy.price}
+  - if @fav
+    = paginate(@fav)

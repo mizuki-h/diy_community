@@ -1,0 +1,15 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title DiyCommunity
+    = csrf_meta_tags
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+  %body
+    %header
+      = link_to 'D I Y search', root_path, class: 'logo'
+      = link_to 'My Page', users_path, class: 'mypage'
+      = link_to 'New DIY', new_diy_path, class: 'new-diy'
+    .container
+      = yield

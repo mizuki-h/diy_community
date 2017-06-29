@@ -1,0 +1,336 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+ @import "bootstrap-sprockets";
+ @import "bootstrap";
+
+p,h2,h3,h4,a{
+    font-family: fantasy;
+}
+
+ body {
+    padding: 0;
+    margin: 0;
+    color: #262626;
+}
+
+a {
+    text-decoration: none;
+    color: #262626;
+}
+
+header {
+    width: 100%;
+    height: 70px;
+    line-height: 70px;
+    border-bottom: 1px solid #DBDBDB;
+}
+
+header div {
+    width: 60%;
+    margin: auto;
+}
+
+header .logo  {
+    display: inline-block;
+    font-size: 25px;
+    font-family: fantasy;
+    font-weight: bolder;
+    margin-left: 100px;
+}
+header .logo:hover{
+    text-decoration: none;
+}
+
+header .new-diy {
+     color: gray;
+    height: 36px;
+    margin-left: 65px;
+    font-weight: bolder;
+}
+header .mypage {
+    color: gray;
+    height: 36px;
+        margin-left: 450px;
+    font-weight: bolder;
+}
+
+.container {
+/*    width: 100%;*/
+    min-height: calc(100vh - 70px);
+    background-color: #FAFAFA;
+    padding: 50px 0;
+}
+
+.diy-card {
+    background-color: white;
+    margin: 0 30px 25px;
+    width: 320px;
+    border: 1px solid #EFEFEF;
+    height: 290px;
+    color:#31220f;
+}
+.diy-card:hover{
+    opacity: 0.7;
+}
+
+.diy-title {
+    height: 20px;
+    width: 14em;
+    margin: 0 auto;
+    padding-top: 15px;
+}
+
+.diy-img {
+    text-align: center;
+    border-top: 1px solid #EFEFEF;
+    border-bottom: 1px solid #EFEFEF;
+}
+
+.diy-img img {
+    max-width: 270px;
+    max-height: 180px;
+}
+
+.diy-price {
+    padding: 15px;
+    font-size: 15px;
+    margin-top: 25px;
+}
+.diy-title, .diy-price{
+  text-align: center;
+}
+
+.venue-card-links {
+    height: 50px;
+    line-height: 50px;
+    text-align: right;
+    padding-right: 20px;
+}
+
+.venue-card-links a {
+    margin-left: 5px;
+    text-decoration: underline;
+}
+
+.venue {
+    width: 80%;
+    margin: auto;
+}
+
+.venue-info {
+    width: 60%;
+    float: left;
+}
+
+.venue-reviews {
+    overflow: auto;
+}
+
+.review-card {
+    margin-bottom: 30px;
+    background-color: white;
+    border: 1px solid #EFEFEF;
+    width: 350px;
+}
+
+.review-card-title {
+    height: 50px;
+    line-height: 50px;
+    padding-left: 20px;
+}
+
+.review-card-description {
+    padding: 20px;
+    font-size: 15px;
+    border-top: 1px solid #EFEFEF;
+}
+/*投稿画面*/
+.diy-card-form  {
+background-color: white;
+    width: 770px;
+    height: 660px;
+    border: 1px solid #EFEFEF;
+    margin: 0 auto;
+    position:relative;
+}
+.diy-card-form h2{
+text-align: center;
+    margin: 30px;
+}
+
+.diy-form {
+    margin: auto;
+}
+
+.diy-form input[type=text] {
+    display: block;
+    width: 80%;
+    height: 60px;
+    border: 1px solid #EFEFEF;
+    border-radius: 5px;
+    margin: 10px auto;
+    text-indent: 1.0em;
+}
+
+.diy-form input[type=file] {
+    padding: 20px 20px 0 20px;
+}
+
+.diy-form input[type=submit] {
+  background-color: #da70d6;
+  color: white;
+  border: 1px solid #EFEFEF;
+  border-radius: 5px;
+  position: absolute;
+  top: 530px;
+  left: 80px;
+  width: 80%;
+  height: 50px;
+}
+
+.diy-form img {
+    max-width: 600px;
+    height: 400px;
+}
+
+.diy-form textarea {
+    width: 80%;
+    height: 160px;
+    border-radius: 5px;
+    border: 1px solid #EFEFEF;
+    margin: 10px 77px 40px;
+}
+
+.col-md-3, .col-md-4{
+    float: left;
+}
+
+/*詳細画面*/
+.diy-detail-card{
+    background-color: white;
+    margin: 0 120px 35px;
+    width: 940px;
+    border: 1px solid #EFEFEF;
+    min-height: 650px;
+    padding-bottom:30px;
+}
+.diy-detail-img img{
+  display: block;
+  margin: 35px auto;
+  min-width: 300px;
+  height:350px;
+}
+.diy-detail-card p{
+  text-indent:6.0em;
+  font-size: 18px;
+  color:#31220f;
+}
+.diy-detail-card h3{
+  margin-left:2.0em;
+  color:#31220f;
+}
+.favorite{
+    position: absolute;
+    top: 50px;
+    right: 80px;
+}
+.favorite:hover{
+    opacity: 0.7;
+}
+.favorite input[type=button]{
+    background-color: #fff;
+    color: #8a6d3b;
+    font-size: 31px;
+    width: 45px;
+    height: 43px;
+    border-radius: 5px;
+    line-height: 0.5;
+    border: 2px solid #8a6d3b;
+}
+.diy-detail-comment p{
+    text-indent: 0;
+    width: 700px;
+    margin-left: 110px;
+}
+
+/*検索*/
+.search-keyword, .search-price{
+  margin-left:30px;
+}
+
+.search-keyword input[type=text]{
+    display: block;
+    width: 30%;
+    height: 40px;
+    border: 1px solid #EFEFEF;
+    border-radius: 5px;
+    margin-left: 40px;
+  }
+  .search-price input[type=number]{
+    display: block;
+    width: 15%;
+    height: 40px;
+    border: 1px solid #EFEFEF;
+    border-radius: 5px;
+    margin-left: 40px;
+  }
+.search-submit{
+float:right;
+}
+.search-submit input[type=submit]{
+    position: absolute;
+    top: 95px;
+    left: 330px;
+    background-color: #da70d6;
+    color: white;
+    border: 1px solid #EFEFEF;
+    border-radius: 5px;
+}
+.diy-form input[type=submit]:hover, .search-submit input[type=submit]:hover{
+    opacity: 0.7;
+}
+.search{
+  position:relative;
+  margin-bottom: 40px;
+}
+.result{
+  position: absolute;
+  top: 10px;
+  left: 560px;
+  font-size: 20px;
+  color: #da70d6;
+}
+
+/*mypage*/
+#mypage h3{
+    line-height: 0;
+    margin-bottom: 50px;
+    text-align: center;
+}
+#mypage h3 span{
+    color: #8a6d3b;
+    font-size:30px;
+    margin-right:10px;
+    font-weight:bold;
+}
+
+.pagination{
+    content:"";
+    display:block;
+    clear:both;
+    float: right;
+    margin-right: 70px;
+}
